@@ -1,0 +1,62 @@
+body {
+    background-color: #f4f0e5;
+}
+
+.profile-img {
+    margin-left: 50px;
+    width: 30%;
+    border: 1px solid;
+}
+
+
+.project-carousel-inner {
+background-color: #f8f9fa;
+border: 1px solid #e0e0e0;
+min-height: 240px;
+/* push controls outside the card */
+position: relative;
+}
+
+.project-text h4 {
+font-size: 1.25rem;
+}
+
+.project-text p {
+font-size: 0.95rem;
+line-height: 1.65;
+}
+
+.project-thumb {
+width: 180px;
+height: 180px;
+object-fit: cover;
+border: 2px solid #dee2e6;
+}
+
+.tag {
+display: inline-block;
+padding: 3px 10px;
+border-radius: 20px;
+font-size: 0.78rem;
+background-color: #e9ecef;
+color: #495057;
+}
+
+/* make the prev/next arrows dark so they're visible on light bg */
+#projectsCarousel .carousel-control-prev-icon,
+#projectsCarousel .carousel-control-next-icon {
+filter: invert(1) grayscale(100%) brightness(0);
+}
+
+/* nudge indicators below the card */
+#projectsCarousel .carousel-indicators {
+bottom: -30px;
+}
+
+#projectsCarousel .carousel-indicators [data-bs-target] {
+background-color: #6c757d;
+}
+
+@media (max-width: 576px) {
+.project-img-wrap { display: none; }
+}
