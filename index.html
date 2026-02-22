@@ -23,8 +23,11 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a> 
                 </li> 
                 <li class="nav-item"> 
-                    <a class="nav-link" href="#">Projects</a> 
+                    <a class="nav-link" href="#projects">Projects</a> 
                 </li> 
+                <li class="nav-item"> 
+                    <a class="nav-link" href="#contact">Contact</a> 
+                </li>
                 <li class="nav-item"> 
                     <a class="nav-link disabled" aria-disabled="true">Resume</a> 
                 </li> 
@@ -36,19 +39,28 @@
 
 
 <div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
-    <div class="about-section ">
-        <p class="mb-0">Hello, my name is</p>
-        <h1 class="display-4 fw-bold"> Ricardo Rios</h1>
-            <h5 > A recent graduate in mechatronic engineering and finance </h5>
-    </div>
-    <img class="profile-img rounded img-fluid" src="./me.jpeg">
+  <div class = "card-bg d-flex justify-content-evenly align-items-center bg-light rounded shadow-lg p-3 gap-5">
+      <div>
+          <p class="mb-0">Hello, my name is</p>
+          <h1 class="display-4 fw-bold"> Ricardo Rios</h1>
+              <h5 > A recent graduate in mechatronic engineering and finance </h5>
+      </div>
+      <img class="profile-img rounded img-fluid" src="./me.jpeg">
+  </div>
 </div>
 
 <div class="container">
     <h2 class="mb-2 d-flex justify-content-center ">About Me</h2>
-    <p>I'm a recent graduate with a passion for mechatronic engineering and finance. I have a strong background in both fields, and I'm eager to apply my skills and knowledge to real-world challenges. I enjoy working on projects that combine technology and finance, and I'm always looking for opportunities to learn and grow in these areas.</p>
+    <div class="about-text px-4 mt-3">
+      <p>I’m a graduate that is eager to jumpstart my professional career and build foundations from a entry position. 
+        I studied at the University of Technology, Sydney in Australia with a double degree in mechatronic engineering and finance.
+        I've reached various milestones so far, including receiving an internship with Tesla as part of their energy storage team across APAC,
+        and studying abroad in the United Kingdom at the University of Liverpool. Since graduating, I decided to take a gap year to backpack across Asia which was an incredible experience that I'll treasure forever, 
+        I've now come home with a renewed sense of purpose and drive to establish my engineering career.
+    </div>
+</div>
 
-<div class="container my-5">
+<div class="container my-5" id ="projects">
   <h2 class="mb-4 d-flex justify-content-center">Projects</h2>
 
   <div id="projectsCarousel" class="carousel slide" data-bs-ride="false">
@@ -63,74 +75,54 @@
     <!-- Slides -->
     <div class="carousel-inner project-carousel-inner rounded shadow-sm">
 
+
       <!-- Slide 1 -->
       <div class="carousel-item active">
+        <div class="d-flex align-items-center p-4 gap-4">
+          <div class="project-text flex-grow-1">
+            <h4 class="fw-bold">Autonomous Robot Navigation</h4>
+            <p class="text-muted mb-3">
+              As part of a team, I programmed a mobile robot 'TurtleBot3' to autonomously naviagate a warehouse environment.
+              I focused on the controls section of the project, implmenting motion algorithms and a PID controller to ensure accurate and stable navigation.
+              A path planning algorithm was developed to allow the robot to navigate around obstacles and reach its destination efficiently.
+              The ROS framework was utilised to communicate dynamically with the robot, as RGB-D sensors were used to detect and avoid obstacles.
+              The projects was successful in demonstrating autononomous navigation, but revealed challenges in traversing real-time environments. 
+            </p>
+            <a href="https://github.com/riccyrios/T11-autonomous-warehouse-project" class="btn btn-outline-dark mb-3">Source Code (Github) </a>
+            <div class="d-flex gap-2 flex-wrap">
+              <span class="tag">C++</span>
+              <span class="tag">ROS</span>
+              <span class="tag">SLAM</span>
+              <span class="tag">Sensor and Controls</span>
+            </div>
+          </div>
+          <div class="project-img-wrap flex-shrink-0">
+            <video controls class="project-thumb rounded">
+              <source src="./turtlebot.mp4" type="video/mp4">
+          </div>
+        </div>
+      </div>
+
+            <!-- Slide 1 -->
+      <div class="carousel-item">
         <div class="d-flex align-items-center p-4 gap-4">
           <div class="project-text flex-grow-1">
             <h4 class="fw-bold">Predictive Power Outage Modelling</h4>
             <p class="text-muted mb-3">
               Developed a machine learning model to predict severe weather-related power outages in the Greater Sydney region, used to optimse the reliability of residential battery systems.
               Model was trained on historical weather and outage data that required extensive pre-processing such as geospatial mapping and feature engineering to ensure accurate data representation. 
-              A Long Short-Term Memory (LSTM) neural network was implemented to detect long-range dependencies in weather patterns. Model acheived high accuracy but limited recall in outage prediction, highlighted key challeng in predicting anomalies such as grid outages in networks. 
-              
-            </p>
-            <div class="d-flex gap-2 flex-wrap">
-              <span class="tag">Arduino</span>
-              <span class="tag">PID Control</span>
-              <span class="tag">PCB Design</span>
-              <span class="tag">C++</span>
-            </div>
-          </div>
-          <div class="project-img-wrap flex-shrink-0">
-            <img src="" alt="Project 1" class="project-thumb rounded">
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 2 -->
-      <div class="carousel-item">
-        <div class="d-flex align-items-center p-4 gap-4">
-          <div class="project-text flex-grow-1">
-            <span class="badge bg-secondary mb-2">Finance</span>
-            <h4 class="fw-bold">Algorithmic Trading Dashboard</h4>
-            <p class="text-muted mb-3">
-              Built a web-based dashboard for backtesting simple moving average crossover strategies. Pulled historical
-              data via a public API, ran simulations, and visualized P&amp;L curves using Chart.js. Aimed to bridge
-              quant finance concepts with practical tooling.
+              A Long Short-Term Memory (LSTM) neural network was implemented to detect long-range dependencies in weather patterns. 
+              Model acheived high accuracy but limited recall in outage prediction, highlighted key challeng in predicting anomalies such as grid outages in networks. 
             </p>
             <div class="d-flex gap-2 flex-wrap">
               <span class="tag">Python</span>
-              <span class="tag">Pandas</span>
-              <span class="tag">Chart.js</span>
-              <span class="tag">REST API</span>
+              <span class="tag">Data Science</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">PyTorch</span>
             </div>
           </div>
           <div class="project-img-wrap flex-shrink-0">
-            <img src="" alt="Project 2" class="project-thumb rounded">
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="carousel-item">
-        <div class="d-flex align-items-center p-4 gap-4">
-          <div class="project-text flex-grow-1">
-            <span class="badge bg-secondary mb-2">Engineering</span>
-            <h4 class="fw-bold">Smart Home Sensor Network</h4>
-            <p class="text-muted mb-3">
-              Developed a low-power IoT sensor network for monitoring temperature, humidity, and motion across multiple
-              rooms. Used MQTT for messaging, Node-RED for orchestration, and a Raspberry Pi as the local broker.
-              Data was visualised on a live Grafana dashboard.
-            </p>
-            <div class="d-flex gap-2 flex-wrap">
-              <span class="tag">IoT</span>
-              <span class="tag">MQTT</span>
-              <span class="tag">Raspberry Pi</span>
-              <span class="tag">Grafana</span>
-            </div>
-          </div>
-          <div class="project-img-wrap flex-shrink-0">
-            <img src="" alt="Project 3" class="project-thumb rounded">
+            <img src="./sydney-outages.png" alt="Project 1" class="project-thumb rounded">
           </div>
         </div>
       </div>
@@ -149,11 +141,16 @@
 
   </div>
 
-<div class="container">
+<div class="container mt-5" id="contact">
     <h2 class="mb-2 d-flex justify-content-center ">Contact</h2>
-    <p>You can reach me at:</p>
-    <ul>
-        <li>Email:
+
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a class="btn btn-outline-dark mb-3" href="mailto:ricardos.rios57@gmail.com">ricardos.rios57@gmail.com</a>
+      <a class = "btn btn-outline-dark mb-3"href="https://www.linkedin.com/in/ricardo-rios-0132131ab/" >LinkedIn Profile</a>
+      <a class="btn btn-outline-dark mb-3"href="https://github.com/riccyrios">GitHub Profile</a>
+    </div>
+</div>
+
 
 
  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"> 
